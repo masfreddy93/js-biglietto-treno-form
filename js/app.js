@@ -2,7 +2,7 @@
 // dichiaro la variabile kmDaPercorrere
 const kmDaPercorrere = document.querySelector('input[name="kmDaPercorrere"]');
 // dichiaro la variabile eta 
-const etaPasseggero = document.querySelector('select[name="eta"]')
+const etaPasseggero = document.querySelector('#etaPass')
 console.log(etaPasseggero)
 // dichiaro la variabile bottone 
 const buttonElement = document.querySelector('input[type="submit"]');
@@ -20,10 +20,10 @@ console.log(buttonElement.value);
 
 //lego opzioni del select a variabile js
 
-const minorenne = document.querySelector('option[value="option1"]')
-const maggiorenne = document.querySelector('option[value="option2"]')
-const over65 = document.querySelector('option[value="option3"]')
-console.log(minorenne.value, maggiorenne.value, over65.value)
+// const minorenne = document.querySelector('option[value="option1"]')
+// const maggiorenne = document.querySelector('option[value="option2"]')
+// const over65 = document.querySelector('option[value="option3"]')
+// console.log(minorenne.value, maggiorenne.value, over65.value)
 
 let prezzoFinale;
 
@@ -40,17 +40,17 @@ let prezzoFinale;
         const prezzoBase = parseFloat(kmDaPercorrere.value) * 0.21;
         
         console.log(prezzoBase);
+        console.log(etaPasseggero.value)
 
-
-        if (maggiorenne.value) {
+        if (etaPasseggero.value == "option1") {
             prezzoFinale = prezzoBase;
-            } else if (minorenne.value) {
+            } else if (etaPasseggero.value == "option2") {
                 prezzoFinale = prezzoBase * 0.8;
             } else {
                 prezzoFinale = prezzoBase * 0.6;
             }
-
+            console.log(prezzoFinale) 
     })
 
 
-console.log(prezzoFinale)
+console.log(prezzoFinale) 
