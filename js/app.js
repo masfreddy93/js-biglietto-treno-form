@@ -17,19 +17,21 @@ buttonElement.addEventListener('click', function () {
     const prezzoBase = parseFloat(kmDaPercorrere.value) * 0.21;
 
     if (!isNaN(kmDaPercorrere.value) && (kmDaPercorrere.value >= 1)) {
-        console.log(prezzoBase);
-    
+
+        console.log('Il prezzo base è ' + prezzoBase + '€');
 
             if (etaPasseggero.value == "option1") {
             prezzoFinale = prezzoBase * 0.8;
             } else if (etaPasseggero.value == "option2") {
                 prezzoFinale = prezzoBase;
-            } else if (etaPasseggero.value == "option0") {
+            } 
+            else if (etaPasseggero.value == "option0") {
                 alert('Seleziona una fascia d\'età valida');
-            } else {
+            } 
+            else {
                 prezzoFinale = prezzoBase * 0.6;
            }
-            console.log(prezzoFinale);
+            console.log('Il prezzo finale è ' + prezzoFinale + '€');
     } else {
         console.log('Attenzione: Sono stati inseriti dei valori non corretti. Per favore, aggiornare la pagina e ripetere la procedura');
     }
