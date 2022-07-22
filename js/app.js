@@ -16,7 +16,7 @@ buttonElement.addEventListener('click', function () {
 
     const prezzoBase = parseFloat(kmDaPercorrere.value) * 0.21;
 
-    if (isNaN(kmDaPercorrere.value) || (kmDaPercorrere.value < 1)) {
+    if (isNaN(kmDaPercorrere.value) || (kmDaPercorrere.value < 1) || (etaPasseggero.value == "option0")) {
 
         console.log('Attenzione: Sono stati inseriti dei valori non corretti. Per favore, aggiornare la pagina e ripetere la procedura');
 
