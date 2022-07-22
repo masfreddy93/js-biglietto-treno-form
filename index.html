@@ -9,14 +9,36 @@
 </head>
 <body>
     
-    <input type="text" name="kmDaPercorrere" placeholder="Numero di km da percorrere">
-    <select name="eta" id="etaPass">
-        <option value="option0">Seleziona la tua età</option>
-        <option value="option1">Minore di 18 anni</option>
-        <option value="option2">Tra i 18 anni e i 65 anni compresi</option>
-        <option value="option3">Over 65</option>
-    </select>
-    <input type="submit" value="Invia" name="" id="">
+    <div class="container">
+
+        <div class="form">
+            <input type="text" name="nomePasseggero" placeholder="Nome e Cognome" required>
+            <input type="text" name="kmDaPercorrere" placeholder="Distanza" required>
+            <select name="eta" id="etaPass">
+                <option value="option0">Seleziona la tua età</option>
+                <option value="option1">Minore di 18 anni</option>
+                <option value="option2">Tra i 18 anni e i 65 anni compresi</option>
+                <option value="option3">Over 65</option>
+            </select>
+            <input type="submit" value="Invia" name="" id="">
+            <button type="button">Annulla</button>
+        </div>
+    
+        <div class="output">
+            <div class="nome-output">
+                Nome Passeggero
+            </div>
+            <div class="prezzo-output">
+                Prezzo finale
+            </div>
+            <div class="buon-viaggio">
+                Buon Viaggio
+            </div>
+        </div>
+
+        <img src="https://icon-library.com/images/under-construction-icon-png/under-construction-icon-png-23.jpg" alt="Pagina in costruzione" class="lavori-in-corso">
+    
+    </div>
 
     <script src="./js/app.js"></script>
 </body>

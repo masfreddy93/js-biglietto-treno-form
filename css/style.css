@@ -4,3 +4,47 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(47, 85, 72);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+    padding: 10px;
+    background-color: aquamarine;
+    color: white;
+    border: 2px solid brown;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.output {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(1, 192, 106);
+    border: 2px solid brown;
+    color: white;
+    gap: 10px;
+}
+
+.lavori-in-corso {
+    width: 200px;
+    display: block;
+    border: 5px solid red;
+}

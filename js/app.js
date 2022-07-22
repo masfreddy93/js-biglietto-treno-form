@@ -6,6 +6,11 @@ const etaPasseggero = document.querySelector('#etaPass')
 // dichiaro la variabile bottone 
 const buttonElement = document.querySelector('input[type="submit"]');
 console.log(buttonElement.value);
+const bottone = document.querySelector('button[type="button"]');
+console.log(bottone)
+//variabile nome
+let nomePasseggero = document.querySelector('input[name="nomePasseggero"]');
+console.log(nomePasseggero)
 
 
 //aggiungo l'evento 'click' al bottone; dichiaro prezzoBase e lo calcolo all'interno dell'evento
@@ -36,5 +41,32 @@ buttonElement.addEventListener('click', function () {
                 prezzoFinale = prezzoBase * 0.6;
            }
             console.log('Il prezzo finale è ' + prezzoFinale + '€');
+
+            let contenitore1 = document.createElement("div");
+            contenitore1.append(prezzoFinale.toFixed(2));
+            console.log(contenitore1);
+
+            let contenitore2 = document.querySelector(' .prezzo-output');
+            contenitore2.append(contenitore1);
+
+            let contenitore3 = document.createElement("div");
+            contenitore3.append(nomePasseggero);
+            console.log(contenitore3);
+
+            let contenitore4 = document.querySelector(' .nome-output');
+            contenitore4.append(contenitore3);
     } 
 })
+
+// evento bottone 'annulla'
+bottone.addEventListener('click', function () {
+
+    etaPasseggero.value = "option0";
+    kmDaPercorrere.value = "";
+    nomePasseggero.value = "";
+
+})
+
+
+// messaggi di output
+
